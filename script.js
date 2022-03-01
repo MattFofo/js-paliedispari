@@ -40,3 +40,48 @@ btnStart.addEventListener('click', function() {
     }
 
 })
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Pari e Dispari
+// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+// Sommiamo i due numeri
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+// Dichiariamo chi ha vinto.
+
+const userInput = (prompt('scrivi pari o dispari')).toLowerCase;
+const userNum = parseInt(prompt('inserisci un numero da 1 a 5'));
+const pcNum = rngBetween(1, 5);
+let sum = userNum + pcNum;
+
+console.log(pcNum, 'somma:', sum)
+
+
+//funzione per generare un numero casuale compreso tra 'min, max'
+function rngBetween(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+
+//funzione per stabilire se un numero è pari o dispari
+function isEven(num) {
+    
+    if (num % 2 == 0) {
+        return true;
+        
+    }
+}
+
+
+if (isEven(sum) && userInput == 'pari') {
+    console.log('hai vinto');
+
+}else if (!isEven(sum) && userInput == 'dispari') {
+    console.log('hai vinto');
+    
+}else {
+    console.log('hai diversamente vinto');
+}
+
+
