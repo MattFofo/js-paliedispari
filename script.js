@@ -50,7 +50,7 @@ btnStart.addEventListener('click', function() {
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-const userInput = (prompt('scrivi pari o dispari')).toLowerCase;
+const userInput = prompt('scrivi pari o dispari');
 const userNum = parseInt(prompt('inserisci un numero da 1 a 5'));
 const pcNum = rngBetween(1, 5);
 let sum = userNum + pcNum;
@@ -70,6 +70,8 @@ function isEven(num) {
     if (num % 2 == 0) {
         return true;
         
+    }else {
+        return false;
     }
 }
 
