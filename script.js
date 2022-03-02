@@ -79,13 +79,11 @@ function isEven(num) {
 }
 
 
+btnStart2.addEventListener('click', play);
 
-
-const pcNum = rngBetween(1, 5);
-let sum = parseInt(userNum) + parseInt(pcNum);
-
-
-btnStart2.addEventListener('click', function() {
+function play() {
+    const pcNum = rngBetween(1, 5);
+    let sum = parseInt(userNum) + parseInt(pcNum);
 
     elePcNum.innerHTML = 'numero pc: ' + pcNum;
     eleSumNums.innerHTML = 'somma numeri: ' + sum;
@@ -100,5 +98,5 @@ btnStart2.addEventListener('click', function() {
     }else {
         output2.innerHTML = 'hai perso con stile';
     }
-
-})
+    
+}
